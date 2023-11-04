@@ -1,19 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# from numpy import arange
-# from numpy.random import choice
-from random import randint
-=======
-=======
->>>>>>> origin/master
 from numpy import arange
 from numpy.random import choice
 from random import randint
 from random import choice as randchoice
-<<<<<<< HEAD
->>>>>>> 5330821 (Reworked how movement is handled.)
-=======
->>>>>>> origin/master
 import traceback
 
 # <-- Items START -->
@@ -58,12 +46,6 @@ class Axe:
 		self.grabbed = False
 		self.weapon = True
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-	def action(self): print("Whoosh!")
-=======
-=======
->>>>>>> origin/master
 	def action(self): 
 		if self.grabbed: print("Whoosh!")
 
@@ -71,24 +53,13 @@ class Axe:
 class JewelEncrustedEgg:
 	def __init__(self):
 		self.grabbed = False
-<<<<<<< HEAD
->>>>>>> 5330821 (Reworked how movement is handled.)
-=======
->>>>>>> origin/master
 
 
 leaflet = Leaflet()
 lantern = Lantern()
 sword = Sword()
 axe = Axe()
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 jewelEgg = JewelEncrustedEgg()
->>>>>>> 5330821 (Reworked how movement is handled.)
-=======
-jewelEgg = JewelEncrustedEgg()
->>>>>>> origin/master
 # <-- Items END -->
 
 
@@ -97,24 +68,10 @@ jewelEgg = JewelEncrustedEgg()
 class Troll:
 	def __init__(self):
 		self.alive = True
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-	def attack(self, player):
-		# atk_num = choice(arrange(0, 3), p=[.4, .4, .2])
-		atk_num = randint(0, 2)
-=======
-=======
->>>>>>> origin/master
 		self.wounds = 0
 
 	def attack(self, player):
 		atk_num = choice(arange(0, 3), p=[.4, .4, .2])
-		# atk_num = randint(0, 2)
-<<<<<<< HEAD
->>>>>>> 5330821 (Reworked how movement is handled.)
-=======
->>>>>>> origin/master
 		if atk_num == 0:
 			print("The troll's axe barely misses your ear.\n")
 		elif atk_num == 1:
@@ -125,25 +82,6 @@ class Troll:
 			print("The axe digs into your body, killing you instantly.\n")
 			player.death()
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-	def hurt(self, weapon):
-		try:
-			atk_num = randint(0, 3)
-			if atk_num == 0:
-				print("You missed your attack!")
-				self.attack()
-			elif atk_num == 1:
-				print(atk_num)
-			elif atk_num == 2:
-				print(atk_num)
-			elif atk_num == 3:
-				print(f"""It's curtains for the troll as your {weapon.__class__.__name__} removes his head.
-Almost as soon as the troll breathes his last breath, a cloud of sinister
-black fog envelops him, and when the fog lifts, the carcass has disappeared.""")
-=======
-=======
->>>>>>> origin/master
 	def hurt(self, player, weapon):
 		try:
 			if self.wounds == 2:
@@ -170,11 +108,6 @@ The troll slowly regains his feet.""")
 					print("The unarmed troll cannot defend himself: He dies.")
 				print("""Almost as soon as the troll breathes his last breath, a cloud of sinister
 black fog envelops him, and when the fog lifts, the carcass has disappeared.""")
-
-<<<<<<< HEAD
->>>>>>> 5330821 (Reworked how movement is handled.)
-=======
->>>>>>> origin/master
 				if weapon == sword:
 					print("Your sword is no longer glowing.\n")
 				self.alive = False
@@ -183,12 +116,9 @@ black fog envelops him, and when the fog lifts, the carcass has disappeared.""")
 			print(f"An error occurred on line {tb[-1].lineno}: {e}")
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 troll = Troll()
-=======
-=======
->>>>>>> origin/master
+
+
 class Thief:
 	def __init__(self):
 		self.alive = True
@@ -201,10 +131,6 @@ class Thief:
 
 troll = Troll()
 thief = Thief()
-<<<<<<< HEAD
->>>>>>> 5330821 (Reworked how movement is handled.)
-=======
->>>>>>> origin/master
 # <-- Monsters END -->
 
 
@@ -213,25 +139,11 @@ items = {
 	"lantern": lantern,
 	"sword": sword,
 	"axe": axe,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 	"egg": jewelEgg,
->>>>>>> 5330821 (Reworked how movement is handled.)
-=======
-	"egg": jewelEgg,
->>>>>>> origin/master
 }
 
 
 monsters = {
 	"troll": troll,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 	"thief": thief,
->>>>>>> 5330821 (Reworked how movement is handled.)
-=======
-	"thief": thief,
->>>>>>> origin/master
 }
